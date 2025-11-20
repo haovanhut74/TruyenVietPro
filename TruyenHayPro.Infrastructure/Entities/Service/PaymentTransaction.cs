@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TruyenHayPro.Infrastructure.Entities.Base;
 
 namespace TruyenHayPro.Infrastructure.Entities;
 
-public class PaymentTransaction
+public class PaymentTransaction : TenantEntity
 {
     public Guid? UserId { get; set; }
     public Guid? OrderId { get; set; }
