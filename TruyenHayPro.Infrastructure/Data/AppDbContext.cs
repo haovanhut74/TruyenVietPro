@@ -5,17 +5,17 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using TruyenHayPro.Infrastructure.Entities;
-using TruyenHayPro.Infrastructure.Entities.Auth;
-using TruyenHayPro.Infrastructure.Entities.Base;
-using TruyenHayPro.Infrastructure.Entities.Manager;
-using TruyenHayPro.Infrastructure.Entities.Product;
-using TruyenHayPro.Infrastructure.Entities.Role;
-using TruyenHayPro.Infrastructure.Entities.Service;
+using TruyenHayPro.Application.Common;
+using TruyenHayPro.Core.Entities;
+using TruyenHayPro.Core.Entities.Auth;
+using TruyenHayPro.Core.Entities.Base;
+using TruyenHayPro.Core.Entities.Manager;
+using TruyenHayPro.Core.Entities.Role;
+using TruyenHayPro.Core.Entities.Service;
 
 namespace TruyenHayPro.Infrastructure.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext, IAppDbContext
     {
         private readonly ITenantProvider _tenantProvider;
         private readonly Guid? _currentTenantId;

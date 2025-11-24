@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TruyenHayPro.Infrastructure.Entities.Service;
+using TruyenHayPro.Core.Entities.Service;
 
 namespace TruyenHayPro.Infrastructure.Data.Config;
 

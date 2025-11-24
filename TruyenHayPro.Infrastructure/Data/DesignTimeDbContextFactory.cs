@@ -27,7 +27,7 @@ namespace TruyenHayPro.Infrastructure.Data
             // Use the generic DbContextOptionsBuilder<AppDbContext> to avoid ambiguous UseSqlServer overloads
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
             optionsBuilder.UseSqlServer(conn,
-                sqlOptions =>
+                sqlOptions =>   
                 {
                     sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10),
                         errorNumbersToAdd: null);
